@@ -1,5 +1,4 @@
 import { Code2 } from "lucide-react";
-import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const tasks = [
   { title: "Programmēšanas uzdevums par masīviem", deadline: "Pirmdiena, 23:59", status: "Izdarīts", color: "green" },

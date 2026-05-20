@@ -1,5 +1,4 @@
 import { Bus } from "lucide-react";
-import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const steps = [
   { time: "07:20", label: "Celšanās Juglā", desc: "Rīts sākas ar kafiju un ātru pārbaudi, vai somā ir dators, lādētājs un pieraksti." },

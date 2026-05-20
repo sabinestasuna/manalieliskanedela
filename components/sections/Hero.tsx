@@ -1,5 +1,4 @@
 import { GraduationCap } from "lucide-react";
-import { StudyIllustration } from "@/components/StudyIllustrations";
 
 export function Hero() {
   return (

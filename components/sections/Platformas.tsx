@@ -1,5 +1,5 @@
 import { Globe, MessageSquare, Video, GitBranch, Mail } from "lucide-react";
-import { StudyIllustration } from "@/components/StudyIllustrations";
+
 
 const platforms = [
   {

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Calendar, ChevronDown } from "lucide-react";
-import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const schedule = [
   {

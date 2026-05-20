@@ -1,5 +1,4 @@
 import { Dumbbell, Users, Gamepad2, BookOpen } from "lucide-react";
-import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const activities = [
   {
