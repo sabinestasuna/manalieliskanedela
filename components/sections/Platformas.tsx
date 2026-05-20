@@ -55,8 +55,7 @@ export function Platformas() {
           <Globe size={28} className="text-sky-600 dark:text-sky-400" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Studiju platformas</h2>
-        <StudyIllustration variant="platforms" title="studiju platformu savienojumi vienā nedēļā" />
-        <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
+         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
           Datorikas studijās nedēļa nenotiek tikai auditorijā. Liela daļa darba pārceļas uz
           platformām, kur jāatrod materiāli, jāiesniedz uzdevumi, jāpiedalās attālinātās nodarbībās
           un jāseko paziņojumiem. Moodle man ir galvenā vieta, kur pārbaudu termiņus, testus un

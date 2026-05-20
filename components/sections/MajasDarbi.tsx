@@ -26,8 +26,7 @@ export function MajasDarbi() {
             <Code2 size={28} className="text-purple-600 dark:text-purple-400" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Mājasdarbi un projekti</h2>
-          <StudyIllustration variant="tasks" title="mājasdarbu saraksts ar pabeigtiem un kavētiem uzdevumiem" />
-          <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
+           <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
             Mājasdarbi šonedēļ aizņem gandrīz tikpat daudz laika kā lekcijas. Kopā ir septiņi
             uzdevumi, un katram ir citāds ritms: dažus var pabeigt vienā vakarā, bet citi prasa
             vairākas piegājiena reizes. Programmēšanas uzdevumu par masīviem izdarīju ātri, jo

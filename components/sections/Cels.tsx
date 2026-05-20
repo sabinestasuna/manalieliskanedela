@@ -18,7 +18,6 @@ export function Cels() {
             <Bus size={28} className="text-amber-600 dark:text-amber-400" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ceļš uz universitāti</h2>
-          <StudyIllustration variant="route" title="maršruts no Juglas līdz Raiņa bulvārim 19" />
           <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
             Klātienes lekciju dienās mans maršruts sākas Juglā un beidzas Latvijas Universitātē,
             Raiņa bulvārī 19. Tas nav ļoti garš ceļš, tomēr no rīta tas prasa disciplīnu, jo

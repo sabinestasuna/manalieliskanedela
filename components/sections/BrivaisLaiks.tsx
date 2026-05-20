@@ -31,7 +31,8 @@ const activities = [
 const colorMap: Record<string, string> = {
   red: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
   green: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
-  violet: "bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400",
+  violet:
+    "bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400",
   blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
 };
 
@@ -43,17 +44,19 @@ export function BrivaisLaiks() {
           <Gamepad2 size={28} className="text-green-600 dark:text-green-400" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Brīvais laiks</h2>
-        <StudyIllustration variant="freeTime" title="līdzsvars starp atpūtu, draugiem un mācībām" />
         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Brīvais laiks datorikas studenta nedēļā nav tukša vieta grafikā, bet apzināti jāizcīna.
-          Ja visu laiku domā tikai par lekcijām, mājasdarbiem un termiņiem, nogurums sakrājas ļoti
-          ātri. Tāpēc cenšos nedēļā atstāt vietu kustībai, draugiem un mierīgākiem vakariem.
-          Dažreiz tas izdodas labi, bet citreiz brīvais laiks pārvēršas par vēl vienu iespēju
-          pabeigt iesākto uzdevumu. Man palīdz mazi pārtraukumi: pastaiga pēc lekcijām, saruna ar
-          draugiem, filma vai spēle vakarā. Tajā pašā laikā pilnībā aizmirst par studijām arī nevar,
-          jo nedēļas nogalē bieži jāatkārto teorija vai jāpielabo projekts. Šī sadaļa rāda, ka
-          līdzsvars nav perfekts, bet tas ir svarīgs. Bez atpūtas pat interesanti priekšmeti sāk
-          šķist smagi, un koda kļūdas kļūst arvien grūtāk pamanāmas.
+          Brīvais laiks datorikas studenta nedēļā nav tukša vieta grafikā, bet
+          apzināti jāizcīna. Ja visu laiku domā tikai par lekcijām, mājasdarbiem
+          un termiņiem, nogurums sakrājas ļoti ātri. Tāpēc cenšos nedēļā atstāt
+          vietu kustībai, draugiem un mierīgākiem vakariem. Dažreiz tas izdodas
+          labi, bet citreiz brīvais laiks pārvēršas par vēl vienu iespēju
+          pabeigt iesākto uzdevumu. Man palīdz mazi pārtraukumi: pastaiga pēc
+          lekcijām, saruna ar draugiem, filma vai spēle vakarā. Tajā pašā laikā
+          pilnībā aizmirst par studijām arī nevar, jo nedēļas nogalē bieži
+          jāatkārto teorija vai jāpielabo projekts. Šī sadaļa rāda, ka līdzsvars
+          nav perfekts, bet tas ir svarīgs. Bez atpūtas pat interesanti
+          priekšmeti sāk šķist smagi, un koda kļūdas kļūst arvien grūtāk
+          pamanāmas.
         </p>
       </div>
 
@@ -65,11 +68,15 @@ export function BrivaisLaiks() {
               key={a.title}
               className="p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
-              <div className={`flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${colorMap[a.color]}`}>
+              <div
+                className={`flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${colorMap[a.color]}`}
+              >
                 <Icon size={20} />
               </div>
               <h3 className="font-semibold text-sm mb-2">{a.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{a.text}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                {a.text}
+              </p>
             </div>
           );
         })}

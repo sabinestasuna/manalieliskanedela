@@ -47,7 +47,6 @@ export function Lekcijas() {
           <Calendar size={28} className="text-green-600 dark:text-green-400" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Lekciju grafiks</h2>
-        <StudyIllustration variant="lectures" title="lekciju grafiks ar vairākām nodarbībām vienā dienā" />
         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
           Šonedēļ mans lekciju grafiks ir diezgan nevienmērīgs: dažās dienās ir tikai viena
           nodarbība, bet pirmdienā un trešdienā lekcijas sakrājas viena pēc otras. Kopā ir sešas

@@ -11,8 +11,7 @@ export function Hero() {
         <GraduationCap size={40} className="text-blue-600 dark:text-blue-400" />
       </div>
 
-      <StudyIllustration variant="hero" title="studiju nedēļas noskaņas attēls ar lekcijām, ceļu un uzdevumiem" />
-
+      
       <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4 max-w-2xl">
         Viena darba nedēļa datorikas studentes dzīvē
       </h1>
