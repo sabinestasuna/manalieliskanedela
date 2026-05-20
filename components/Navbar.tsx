@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 
 const links = [
@@ -18,9 +18,11 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 dark:bg-gray-950/85 backdrop-blur border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-        <span className="font-semibold text-sm tracking-tight">LU Datorikas Students</span>
+        <a href="#sakums" className="font-semibold text-sm tracking-tight">
+          Sabīnes studiju nedēļa
+        </a>
 
         <ul className="hidden md:flex gap-5 text-sm">
           {links.map((l) => (
@@ -37,17 +39,19 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <button
+            type="button"
             onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
             className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            aria-label="Pārslēgt tēmu"
+            aria-label="Pārslēgt krāsu režīmu"
           >
             {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
           <button
+            type="button"
             className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
             onClick={() => setOpen(!open)}
-            aria-label="Izvēlne"
+            aria-label="Atvērt vai aizvērt izvēlni"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>

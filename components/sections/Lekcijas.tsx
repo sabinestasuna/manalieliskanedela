@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Calendar, ChevronDown } from "lucide-react";
+import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const schedule = [
   {
@@ -46,11 +47,17 @@ export function Lekcijas() {
           <Calendar size={28} className="text-green-600 dark:text-green-400" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Lekciju grafiks</h2>
+        <StudyIllustration variant="lectures" title="lekciju grafiks ar vairākām nodarbībām vienā dienā" />
         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Šonedēļ man ir sešas lekcijas četrās dienās. Dažas dienas ir mierīgākas, bet pirmdienā
-          un trešdienā sanāk vairākas lekcijas pēc kārtas. Klātienē Raiņa bulvārī 19 iet ir vērts,
-          jo programmēšanā, algoritmos un datu struktūrās katra minūte noder. Attālinātās lekcijas
-          Zoom un Teams ir ērtas, bet tās vajag īpaši pierakstīt, jo mājās ir pārāk viegli novērsties.
+          Šonedēļ mans lekciju grafiks ir diezgan nevienmērīgs: dažās dienās ir tikai viena
+          nodarbība, bet pirmdienā un trešdienā lekcijas sakrājas viena pēc otras. Kopā ir sešas
+          lekcijas četrās dienās, tāpēc nedēļa neizskatās pārāk pilna tikai tad, ja skatās uz to no
+          malas. Klātienes nodarbības notiek Raiņa bulvārī 19, un uz tām ir vērts aiziet arī tad,
+          ja no rīta gribas palikt mājās. Programmēšana, algoritmi un datu struktūras prasa īpašu
+          uzmanību, jo pietiek uz brīdi novērsties, lai vēlāk nesaprastu, kāpēc kods nestrādā.
+          Attālinātās lekcijas Zoom un Microsoft Teams ir ērtas, tomēr tām vajag stingru
+          pašdisciplīnu. Mājās ir viegli atlikt pieslēgšanos uz “vēl piecām minūtēm”, tāpēc grafiku
+          turu redzamā vietā un pirms katras lekcijas pārbaudu arī Outlook kalendāru.
         </p>
       </div>
 

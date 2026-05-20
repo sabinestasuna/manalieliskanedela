@@ -1,4 +1,5 @@
 import { Globe, MessageSquare, Video, GitBranch, Mail } from "lucide-react";
+import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const platforms = [
   {
@@ -54,10 +55,17 @@ export function Platformas() {
           <Globe size={28} className="text-sky-600 dark:text-sky-400" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Studiju platformas</h2>
+        <StudyIllustration variant="platforms" title="studiju platformu savienojumi vienā nedēļā" />
         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Katru dienu izmantoju vairākas platformas: Moodle uzdevumiem, Teams un Zoom lekcijām,
-          Outlook paziņojumiem un GitHub kodam. Sākumā ir mulsinoši, kur kas atrodas, bet ar laiku
-          katrai platformai parādās sava vieta studiju ritmā.
+          Datorikas studijās nedēļa nenotiek tikai auditorijā. Liela daļa darba pārceļas uz
+          platformām, kur jāatrod materiāli, jāiesniedz uzdevumi, jāpiedalās attālinātās nodarbībās
+          un jāseko paziņojumiem. Moodle man ir galvenā vieta, kur pārbaudu termiņus, testus un
+          lekciju failus. Teams izmantoju grupas projektam un konsultācijām, jo tur ir viegli
+          sazvanīties un ātri nosūtīt failus. Zoom noder lekcijām, kurās pasniedzējs vēlas atsevišķu
+          tiešsaistes telpu. Outlook ir vajadzīgs, lai nepalaistu garām e-pastus, izmaiņas grafikā
+          un kalendāra uzaicinājumus. GitHub savukārt ir vieta, kur glabāju kodu un mācos strādāt
+          ar versijām. Sākumā šī sistēma šķiet sadrumstalota, bet ar laiku katrai platformai
+          izveidojas sava skaidra loma.
         </p>
       </div>
 

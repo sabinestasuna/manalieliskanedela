@@ -1,4 +1,5 @@
 import { Code2 } from "lucide-react";
+import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const tasks = [
   { title: "Programmēšanas uzdevums par masīviem", deadline: "Pirmdiena, 23:59", status: "Izdarīts", color: "green" },
@@ -25,12 +26,17 @@ export function MajasDarbi() {
             <Code2 size={28} className="text-purple-600 dark:text-purple-400" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Mājasdarbi un projekti</h2>
+          <StudyIllustration variant="tasks" title="mājasdarbu saraksts ar pabeigtiem un kavētiem uzdevumiem" />
           <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-            Šonedēļ man ir septiņi uzdevumi, tāpēc kalendārs ātri piepildās. Divus mazākos darbus
-            izdevās pabeigt laikā, bet datubāzu SQL vaicājumi ievilkās ilgāk nekā plānots.
-            Grupas projektam Teams sarunā sadalījām prototipa daļas, un tagad katram ir savs
-            uzdevums. Visvairāk laika paņem web lapa un datu struktūru praktiskais darbs, jo tur
-            nepietiek tikai izlasīt teoriju - kodam tiešām jāstrādā.
+            Mājasdarbi šonedēļ aizņem gandrīz tikpat daudz laika kā lekcijas. Kopā ir septiņi
+            uzdevumi, un katram ir citāds ritms: dažus var pabeigt vienā vakarā, bet citi prasa
+            vairākas piegājiena reizes. Programmēšanas uzdevumu par masīviem izdarīju ātri, jo
+            tēma bija skaidra, savukārt SQL vaicājumi datubāzēs ieilga un nonāca kavēto darbu
+            sarakstā. Web lapas uzdevums izskatījās vienkāršs tikai sākumā; beigās visvairāk laika
+            paņēma sīkumi, piemēram, atstarpes, krāsas un mobilais skats. Grupas projektam
+            satikāmies Teams sarunā, sadalījām prototipa daļas un pierakstījām termiņus. Grūtākais
+            nav pats darbs, bet kopēja laika atrašana, jo katram ir savas lekcijas, darbi un nogurums.
+            Šī sadaļa labi parāda, ka studijās plānošana ir tikpat svarīga kā koda rakstīšana.
           </p>
         </div>
 

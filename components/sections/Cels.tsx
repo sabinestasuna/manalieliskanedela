@@ -1,4 +1,5 @@
 import { Bus } from "lucide-react";
+import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const steps = [
   { time: "07:20", label: "Celšanās Juglā", desc: "Rīts sākas ar kafiju un ātru pārbaudi, vai somā ir dators, lādētājs un pieraksti." },
@@ -17,11 +18,17 @@ export function Cels() {
             <Bus size={28} className="text-amber-600 dark:text-amber-400" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ceļš uz universitāti</h2>
+          <StudyIllustration variant="route" title="maršruts no Juglas līdz Raiņa bulvārim 19" />
           <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-            Universitāte atrodas Raiņa bulvārī 19, bet mans ceļš sākas Juglā. No rīta tas nozīmē
-            agrāku celšanos, sabiedrisko transportu līdz centram un nelielu gājienu līdz lekcijai.
-            Brauciens aizņem apmēram 45 minūtes, tāpēc klātienes dienās jāplāno vairāk laika nekā
-            attālinātajām lekcijām mājās.
+            Klātienes lekciju dienās mans maršruts sākas Juglā un beidzas Latvijas Universitātē,
+            Raiņa bulvārī 19. Tas nav ļoti garš ceļš, tomēr no rīta tas prasa disciplīnu, jo
+            jārēķinās ar transportu, sastrēgumiem un laiku līdz auditorijai. Parasti izeju no mājas
+            agrāk, nekā gribētos, lai centrā nebūtu jāskrien. Brauciena laikā pārskatu lekciju
+            pierakstus, Outlook paziņojumus vai vienkārši mēģinu pamosties. Šis ceļš ir daļa no
+            studiju rutīnas: attālināti var pieslēgties dažās minūtēs, bet klātienē jāsaplāno viss
+            rīts. Tomēr klātienes nodarbībām ir savs ieguvums. Auditorijā ir vieglāk pajautāt
+            pasniedzējam, aprunāties ar kursa biedriem un just, ka studijas nav tikai ekrāns mājās.
+            Tāpēc ceļš no Juglas uz centru ir mazliet nogurdinošs, bet arī vajadzīgs.
           </p>
         </div>
 

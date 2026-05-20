@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
-  title: "Viena darba nedēļa datorikas studenta dzīvē",
-  description: "Kā izskatās tipiska studiju nedēļa Latvijas Universitātes datorikas studentam",
+  title: "Viena darba nedēļa datorikas studentes dzīvē",
+  description: "Sabīnes Stašūnas vienas darba nedēļas stāsts Latvijas Universitātes datorikas studijās",
 };
 
 export default function RootLayout({

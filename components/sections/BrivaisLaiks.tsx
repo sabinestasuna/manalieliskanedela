@@ -1,29 +1,30 @@
 import { Dumbbell, Users, Gamepad2, BookOpen } from "lucide-react";
+import { StudyIllustration } from "@/components/StudyIllustrations";
 
 const activities = [
   {
     icon: Dumbbell,
-    title: "Sporta zāle",
+    title: "Kustība",
     color: "red",
-    text: "Pirmdienās un ceturtdienās pēc lekcijām eju uz sporta zāli. Ir universitātes zāle, kur studenti var iet par maksu. Tas palīdz atpūsties pēc smagām dienām.",
+    text: "Pēc garām lekcijām palīdz pastaiga vai sporta zāle. Kustība sakārto galvu pēc vairākām stundām pie datora.",
   },
   {
     icon: Users,
-    title: "Laiks ar draugiem",
+    title: "Draugi",
     color: "green",
-    text: "Reizi nedēļā esam kopā — dažreiz kafejnīcā, dažreiz kāda dzīvoklī. Ne vienmēr runājam par studijām. Tas ir labs veids, kā atpūsties un neatrasties visu laiku pie ekrāna.",
+    text: "Tikšanās ar draugiem atgādina, ka studijas nav tikai termiņi. Dažreiz pietiek ar stundu sarunu pie kafijas.",
   },
   {
     icon: Gamepad2,
     title: "Spēles un filmas",
     color: "violet",
-    text: "Vakaros, kad nav steidzami jāizdara uzdevumi, spēlēju vai skatos seriālu. Dažreiz tas aiziet ilgāk nekā plānots. Bet nav jājūtas vainīgam — atpūta ir vajadzīga.",
+    text: "Vakara atpūta palīdz pārslēgties no koda. Svarīgi tikai nepārvērst vienu sēriju par visu nakti.",
   },
   {
     icon: BookOpen,
-    title: "Dažreiz tomēr mācās",
+    title: "Mācības nedēļas nogalē",
     color: "blue",
-    text: "Nedēļas nogalē bieži vien nākas apskatīt lekciju materiālu vai strādāt pie projekta. Tas nav plānots brīvais laiks, bet reizēm nav citas izvēles. Kafija palīdz.",
+    text: "Daļa brīvā laika tomēr aiziet atkārtošanai un projektiem. Tas nav ideāli, bet palīdz nepazaudēt ritmu.",
   },
 ];
 
@@ -42,10 +43,17 @@ export function BrivaisLaiks() {
           <Gamepad2 size={28} className="text-green-600 dark:text-green-400" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Brīvais laiks</h2>
+        <StudyIllustration variant="freeTime" title="līdzsvars starp atpūtu, draugiem un mācībām" />
         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Ne visa nedēļa ir tikai mācīšanās. Jāatrod laiks atpūtai, citādi burnout nāk ātrāk
-          nekā domā. Ir dažādas lietas, ko daru, kad nav jāsēž pie koda — vismaz teorētiski.
-          Praksē dažreiz brīvais laiks pārvēršas par &ldquo;steidzamu uzdevumu darīšanu vakaros&rdquo;.
+          Brīvais laiks datorikas studenta nedēļā nav tukša vieta grafikā, bet apzināti jāizcīna.
+          Ja visu laiku domā tikai par lekcijām, mājasdarbiem un termiņiem, nogurums sakrājas ļoti
+          ātri. Tāpēc cenšos nedēļā atstāt vietu kustībai, draugiem un mierīgākiem vakariem.
+          Dažreiz tas izdodas labi, bet citreiz brīvais laiks pārvēršas par vēl vienu iespēju
+          pabeigt iesākto uzdevumu. Man palīdz mazi pārtraukumi: pastaiga pēc lekcijām, saruna ar
+          draugiem, filma vai spēle vakarā. Tajā pašā laikā pilnībā aizmirst par studijām arī nevar,
+          jo nedēļas nogalē bieži jāatkārto teorija vai jāpielabo projekts. Šī sadaļa rāda, ka
+          līdzsvars nav perfekts, bet tas ir svarīgs. Bez atpūtas pat interesanti priekšmeti sāk
+          šķist smagi, un koda kļūdas kļūst arvien grūtāk pamanāmas.
         </p>
       </div>
 
@@ -55,7 +63,7 @@ export function BrivaisLaiks() {
           return (
             <div
               key={a.title}
-              className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
+              className="p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
               <div className={`flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${colorMap[a.color]}`}>
                 <Icon size={20} />

@@ -1,4 +1,5 @@
 import { GraduationCap } from "lucide-react";
+import { StudyIllustration } from "@/components/StudyIllustrations";
 
 export function Hero() {
   return (
@@ -9,6 +10,8 @@ export function Hero() {
       <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/30">
         <GraduationCap size={40} className="text-blue-600 dark:text-blue-400" />
       </div>
+
+      <StudyIllustration variant="hero" title="studiju nedēļas noskaņas attēls ar lekcijām, ceļu un uzdevumiem" />
 
       <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4 max-w-2xl">
         Viena darba nedēļa datorikas studentes dzīvē
