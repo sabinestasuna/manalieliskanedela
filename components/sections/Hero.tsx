@@ -11,16 +11,16 @@ export function Hero() {
       </div>
 
       <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4 max-w-2xl">
-        Viena darba nedēļa datorikas studenta dzīvē
+        Viena darba nedēļa datorikas studentes dzīvē
       </h1>
 
       <p className="text-gray-600 dark:text-gray-400 text-lg max-w-xl mb-6 leading-relaxed">
-        Kā izskatās tipiska studiju nedēļa Latvijas Universitātē? Lekcijas, mājas darbi,
-        kavēšanās pie koda un nedaudz brīvā laika — viss vienā lapā.
+        Kā izskatās tipiska studiju nedēļa Latvijas Universitātē? Lekcijas, mājasdarbi,
+        kavēšanās pie koda un nedaudz brīvā laika - viss vienā lapā.
       </p>
 
       <p className="text-sm text-gray-500 dark:text-gray-500 font-medium">
-        Jānis Bērziņš · LU Datorikas students
+        Sabīne Stašūna · LU Datorikas studente
       </p>
 
       <a

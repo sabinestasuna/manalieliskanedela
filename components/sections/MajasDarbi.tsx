@@ -1,10 +1,13 @@
 import { Code2 } from "lucide-react";
 
 const tasks = [
-  { title: "Java programmēšanas uzdevums", deadline: "Otrdiena, 23:59", status: "Izdarīts", color: "green" },
-  { title: "Neliela web lapa (HTML/CSS/JS)", deadline: "Piektdiena, 23:59", status: "Procesā", color: "yellow" },
-  { title: "Grupas projekts — prezentācija", deadline: "Nākamnedēļ, ceturtdiena", status: "Sākts", color: "yellow" },
-  { title: "Datubāzu vaicājumu uzdevums", deadline: "Trešdiena, 23:59", status: "Nav sākts", color: "red" },
+  { title: "Programmēšanas uzdevums par masīviem", deadline: "Pirmdiena, 23:59", status: "Izdarīts", color: "green" },
+  { title: "Algoritmu analīzes darba lapa", deadline: "Otrdiena, 18:00", status: "Izdarīts", color: "green" },
+  { title: "Datubāzu SQL vaicājumi", deadline: "Trešdiena, 23:59", status: "Kavējas", color: "red" },
+  { title: "Web lapa ar HTML, CSS un JS", deadline: "Piektdiena, 23:59", status: "Procesā", color: "yellow" },
+  { title: "Grupas projekts - prototips", deadline: "Svētdiena, 20:00", status: "Sākts", color: "yellow" },
+  { title: "Matemātiskās loģikas tests", deadline: "Ceturtdiena, 12:00", status: "Jāatkārto", color: "yellow" },
+  { title: "Datu struktūru praktiskais darbs", deadline: "Nākamnedēļ, pirmdiena", status: "Nav sākts", color: "red" },
 ];
 
 const statusColors: Record<string, string> = {
@@ -23,20 +26,19 @@ export function MajasDarbi() {
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Mājasdarbi un projekti</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-            Šonedēļ man ir četri uzdevumi. Lielāko daļu izdarīju vakaros — pēc lekcijām galva
-            jau ir pilna un grūti koncentrēties. Vismaz divus uzdevumus tiku galā ar laiku,
-            bet ar datubāzu uzdevumu nokavējos. Grupas projekts ir lielākais — mēs sanācām
-            kopā Teams sarunā un sadalījām darbu. Visgrūtāk ir, kad visi ir aizņemti un grūti
-            atrast kopēju laiku. Mājaslapas uzdevums prasīja krietni ilgāk, nekā domāju — CSS
-            pats par sevi ir sava veida mīkla.
+            Šonedēļ man ir septiņi uzdevumi, tāpēc kalendārs ātri piepildās. Divus mazākos darbus
+            izdevās pabeigt laikā, bet datubāzu SQL vaicājumi ievilkās ilgāk nekā plānots.
+            Grupas projektam Teams sarunā sadalījām prototipa daļas, un tagad katram ir savs
+            uzdevums. Visvairāk laika paņem web lapa un datu struktūru praktiskais darbs, jo tur
+            nepietiek tikai izlasīt teoriju - kodam tiešām jāstrādā.
           </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {tasks.map((task, i) => (
+          {tasks.map((task) => (
             <div
-              key={i}
-              className="bg-white dark:bg-gray-950 rounded-xl border border-gray-200 dark:border-gray-800 p-5"
+              key={task.title}
+              className="bg-white dark:bg-gray-950 rounded-lg border border-gray-200 dark:border-gray-800 p-5"
             >
               <div className="flex items-start justify-between gap-3">
                 <p className="font-medium text-sm">{task.title}</p>

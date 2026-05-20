@@ -1,4 +1,4 @@
-import { Globe, MessageSquare, Video, GitBranch } from "lucide-react";
+import { Globe, MessageSquare, Video, GitBranch, Mail } from "lucide-react";
 
 const platforms = [
   {
@@ -6,28 +6,35 @@ const platforms = [
     icon: Globe,
     color: "blue",
     description:
-      "Šeit atrodam visus uzdevumus, lekciju materiālus un atzīmes. Katrs pasniedzējs ievieto savus materiālus šeit. Bez Moodle studijas nav iedomājamas.",
+      "Šeit atrodam uzdevumus, lekciju materiālus, testus un atzīmes. Ja kaut kas nav Moodle, tad parasti sākas neliela detektīva spēle.",
   },
   {
     name: "Microsoft Teams",
     icon: MessageSquare,
     color: "purple",
     description:
-      "Grupas projektu komunikācijai un attālinātām konsultācijām. Dažreiz pasniedzēji raksta paziņojumus arī šeit. Notifications ir daudz.",
+      "Grupas projektu sarunām, attālinātiem praktikumiem un konsultācijām. Teams palīdz, bet paziņojumu tur mēdz būt vairāk nekā vajag.",
   },
   {
     name: "Zoom",
     icon: Video,
     color: "sky",
     description:
-      "Attālinātajām lekcijām. Vienkāršāk nekā Teams, bet bieži ir problēmas ar audio. Kamera jāieslēdz, ja pasniedzējs pieprasa.",
+      "Attālinātajām lekcijām, kur galvenais ir nepalaist garām sākumu un pārbaudīt, vai mikrofons nav ieslēgts nepareizajā brīdī.",
+  },
+  {
+    name: "Outlook",
+    icon: Mail,
+    color: "red",
+    description:
+      "Universitātes e-pastiem, pasniedzēju paziņojumiem un kalendāra uzaicinājumiem. Bez Outlook viegli nepamanīt termiņu maiņas.",
   },
   {
     name: "GitHub",
     icon: GitBranch,
     color: "gray",
     description:
-      "Koda glabāšanai un grupas projektiem. Svarīgi iemācīties izmantot jau no sākuma — darba tirgū bez tā neiztikt. Commits jāraksta angļu valodā.",
+      "Koda glabāšanai un grupas projektiem. Svarīgi iemācīties izmantot jau no sākuma, jo programmēšanā bez versiju kontroles ātri rodas haoss.",
   },
 ];
 
@@ -35,6 +42,7 @@ const colorMap: Record<string, string> = {
   blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
   purple: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
   sky: "bg-sky-100 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400",
+  red: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
   gray: "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300",
 };
 
@@ -47,9 +55,9 @@ export function Platformas() {
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Studiju platformas</h2>
         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Katru dienu izmantoju vismaz trīs dažādas platformas. Sākumā ir mulsinoši — kur
-          meklēt uzdevumus, kur runāt ar grupu, kur iesniegt kodu. Laika gaitā pierod. Tālāk
-          ir īss skaidrojums par katru.
+          Katru dienu izmantoju vairākas platformas: Moodle uzdevumiem, Teams un Zoom lekcijām,
+          Outlook paziņojumiem un GitHub kodam. Sākumā ir mulsinoši, kur kas atrodas, bet ar laiku
+          katrai platformai parādās sava vieta studiju ritmā.
         </p>
       </div>
 
@@ -59,7 +67,7 @@ export function Platformas() {
           return (
             <div
               key={p.name}
-              className="flex gap-4 p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
+              className="flex gap-4 p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
               <div className={`shrink-0 flex items-center justify-center w-11 h-11 rounded-lg ${colorMap[p.color]}`}>
                 <Icon size={22} />
