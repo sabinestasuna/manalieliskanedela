@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Calendar, ChevronDown } from "lucide-react";
 
@@ -45,18 +46,31 @@ export function Lekcijas() {
         <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30">
           <Calendar size={28} className="text-green-600 dark:text-green-400" />
         </div>
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Lekciju grafiks</h2>
-        <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Šonedēļ mans lekciju grafiks ir diezgan nevienmērīgs: dažās dienās ir tikai viena
-          nodarbība, bet pirmdienā un trešdienā lekcijas sakrājas viena pēc otras. Kopā ir sešas
-          lekcijas četrās dienās, tāpēc nedēļa neizskatās pārāk pilna tikai tad, ja skatās uz to no
-          malas. Klātienes nodarbības notiek Raiņa bulvārī 19, un uz tām ir vērts aiziet arī tad,
-          ja no rīta gribas palikt mājās. Programmēšana, algoritmi un datu struktūras prasa īpašu
-          uzmanību, jo pietiek uz brīdi novērsties, lai vēlāk nesaprastu, kāpēc kods nestrādā.
-          Attālinātās lekcijas Zoom un Microsoft Teams ir ērtas, tomēr tām vajag stingru
-          pašdisciplīnu. Mājās ir viegli atlikt pieslēgšanos uz “vēl piecām minūtēm”, tāpēc grafiku
-          turu redzamā vietā un pirms katras lekcijas pārbaudu arī Outlook kalendāru.
-        </p>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Lekciju grafiks</h2>
+
+        <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Šonedēļ mans lekciju grafiks ir diezgan nevienmērīgs: dažās dienās ir tikai viena
+            nodarbība, bet pirmdienā un trešdienā lekcijas sakrājas viena pēc otras. Kopā ir sešas
+            lekcijas četrās dienās, tāpēc nedēļa neizskatās pārāk pilna tikai tad, ja skatās uz to no
+            malas. Klātienes nodarbības notiek Raiņa bulvārī 19, un uz tām ir vērts aiziet arī tad,
+            ja no rīta gribas palikt mājās. Programmēšana, algoritmi un datu struktūras prasa īpašu
+            uzmanību, jo pietiek uz brīdi novērsties, lai vēlāk nesaprastu, kāpēc kods nestrādā.
+            Attālinātās lekcijas Zoom un Microsoft Teams ir ērtas, tomēr tām vajag stingru
+            pašdisciplīnu. Mājās ir viegli atlikt pieslēgšanos uz “vēl piecām minūtēm”, tāpēc grafiku
+            turu redzamā vietā un pirms katras lekcijas pārbaudu arī Outlook kalendāru.
+          </p>
+
+          <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
+            <Image
+              src="/images/lecture-test-board.jpg"
+              alt="Tāfele ar uzrakstu Test kā ilustrācija lekciju grafikam"
+              width={1920}
+              height={1435}
+              className="aspect-[4/5] w-full object-cover"
+            />
+          </figure>
+        </div>
       </div>
 
       <div className="space-y-3">
