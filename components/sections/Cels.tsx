@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Bus } from "lucide-react";
 
 const steps = [
@@ -16,18 +17,31 @@ export function Cels() {
           <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-amber-100 dark:bg-amber-900/30">
             <Bus size={28} className="text-amber-600 dark:text-amber-400" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ceļš uz universitāti</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-            Klātienes lekciju dienās mans maršruts sākas Juglā un beidzas Latvijas Universitātē,
-            Raiņa bulvārī 19. Tas nav ļoti garš ceļš, tomēr no rīta tas prasa disciplīnu, jo
-            jārēķinās ar transportu, sastrēgumiem un laiku līdz auditorijai. Parasti izeju no mājas
-            agrāk, nekā gribētos, lai centrā nebūtu jāskrien. Brauciena laikā pārskatu lekciju
-            pierakstus, Outlook paziņojumus vai vienkārši mēģinu pamosties. Šis ceļš ir daļa no
-            studiju rutīnas: attālināti var pieslēgties dažās minūtēs, bet klātienē jāsaplāno viss
-            rīts. Tomēr klātienes nodarbībām ir savs ieguvums. Auditorijā ir vieglāk pajautāt
-            pasniedzējam, aprunāties ar kursa biedriem un just, ka studijas nav tikai ekrāns mājās.
-            Tāpēc ceļš no Juglas uz centru ir mazliet nogurdinošs, bet arī vajadzīgs.
-          </p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Ceļš uz universitāti</h2>
+
+          <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Klātienes lekciju dienās mans maršruts sākas Juglā un beidzas Latvijas Universitātē,
+              Raiņa bulvārī 19. Tas nav ļoti garš ceļš, tomēr no rīta tas prasa disciplīnu, jo
+              jārēķinās ar transportu, sastrēgumiem un laiku līdz auditorijai. Parasti izeju no mājas
+              agrāk, nekā gribētos, lai centrā nebūtu jāskrien. Brauciena laikā pārskatu lekciju
+              pierakstus, Outlook paziņojumus vai vienkārši mēģinu pamosties. Šis ceļš ir daļa no
+              studiju rutīnas: attālināti var pieslēgties dažās minūtēs, bet klātienē jāsaplāno viss
+              rīts. Tomēr klātienes nodarbībām ir savs ieguvums. Auditorijā ir vieglāk pajautāt
+              pasniedzējam, aprunāties ar kursa biedriem un just, ka studijas nav tikai ekrāns mājās.
+              Tāpēc ceļš no Juglas uz centru ir mazliet nogurdinošs, bet arī vajadzīgs.
+            </p>
+
+            <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
+              <Image
+                src="/images/route-library.jpg"
+                alt="Bibliotēkas telpa kā ilustrācija ceļam uz studijām un universitātes vidi"
+                width={1920}
+                height={1080}
+                className="aspect-[4/5] w-full object-cover"
+              />
+            </figure>
+          </div>
         </div>
 
         <div className="relative max-w-xl mx-auto">

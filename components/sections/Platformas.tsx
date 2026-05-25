@@ -1,5 +1,5 @@
-import { Globe, MessageSquare, Video, GitBranch, Mail } from "lucide-react";
-
+import Image from "next/image";
+import { GitBranch, Globe, Mail, MessageSquare, Video } from "lucide-react";
 
 const platforms = [
   {
@@ -54,18 +54,31 @@ export function Platformas() {
         <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-sky-100 dark:bg-sky-900/30">
           <Globe size={28} className="text-sky-600 dark:text-sky-400" />
         </div>
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Studiju platformas</h2>
-         <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Datorikas studijās nedēļa nenotiek tikai auditorijā. Liela daļa darba pārceļas uz
-          platformām, kur jāatrod materiāli, jāiesniedz uzdevumi, jāpiedalās attālinātās nodarbībās
-          un jāseko paziņojumiem. Moodle man ir galvenā vieta, kur pārbaudu termiņus, testus un
-          lekciju failus. Teams izmantoju grupas projektam un konsultācijām, jo tur ir viegli
-          sazvanīties un ātri nosūtīt failus. Zoom noder lekcijām, kurās pasniedzējs vēlas atsevišķu
-          tiešsaistes telpu. Outlook ir vajadzīgs, lai nepalaistu garām e-pastus, izmaiņas grafikā
-          un kalendāra uzaicinājumus. GitHub savukārt ir vieta, kur glabāju kodu un mācos strādāt
-          ar versijām. Sākumā šī sistēma šķiet sadrumstalota, bet ar laiku katrai platformai
-          izveidojas sava skaidra loma.
-        </p>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Studiju platformas</h2>
+
+        <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Datorikas studijās nedēļa nenotiek tikai auditorijā. Liela daļa darba pārceļas uz
+            platformām, kur jāatrod materiāli, jāiesniedz uzdevumi, jāpiedalās attālinātās nodarbībās
+            un jāseko paziņojumiem. Moodle man ir galvenā vieta, kur pārbaudu termiņus, testus un
+            lekciju failus. Teams izmantoju grupas projektam un konsultācijām, jo tur ir viegli
+            sazvanīties un ātri nosūtīt failus. Zoom noder lekcijām, kurās pasniedzējs vēlas atsevišķu
+            tiešsaistes telpu. Outlook ir vajadzīgs, lai nepalaistu garām e-pastus, izmaiņas grafikā
+            un kalendāra uzaicinājumus. GitHub savukārt ir vieta, kur glabāju kodu un mācos strādāt
+            ar versijām. Sākumā šī sistēma šķiet sadrumstalota, bet ar laiku katrai platformai
+            izveidojas sava skaidra loma.
+          </p>
+
+          <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
+            <Image
+              src="/images/study-platforms-meeting.jpg"
+              alt="Darba tikšanās ar datoriem kā ilustrācija studiju platformām"
+              width={1920}
+              height={1080}
+              className="aspect-[4/5] w-full object-cover"
+            />
+          </figure>
+        </div>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">

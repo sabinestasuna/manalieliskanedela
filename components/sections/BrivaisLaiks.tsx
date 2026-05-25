@@ -1,4 +1,5 @@
-import { Dumbbell, Users, Gamepad2, BookOpen } from "lucide-react";
+import Image from "next/image";
+import { BookOpen, Dumbbell, Gamepad2, Users } from "lucide-react";
 
 const activities = [
   {
@@ -30,8 +31,7 @@ const activities = [
 const colorMap: Record<string, string> = {
   red: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
   green: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
-  violet:
-    "bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400",
+  violet: "bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400",
   blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
 };
 
@@ -42,21 +42,31 @@ export function BrivaisLaiks() {
         <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30">
           <Gamepad2 size={28} className="text-green-600 dark:text-green-400" />
         </div>
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Brīvais laiks</h2>
-        <p className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-          Brīvais laiks datorikas studenta nedēļā nav tukša vieta grafikā, bet
-          apzināti jāizcīna. Ja visu laiku domā tikai par lekcijām, mājasdarbiem
-          un termiņiem, nogurums sakrājas ļoti ātri. Tāpēc cenšos nedēļā atstāt
-          vietu kustībai, draugiem un mierīgākiem vakariem. Dažreiz tas izdodas
-          labi, bet citreiz brīvais laiks pārvēršas par vēl vienu iespēju
-          pabeigt iesākto uzdevumu. Man palīdz mazi pārtraukumi: pastaiga pēc
-          lekcijām, saruna ar draugiem, filma vai spēle vakarā. Tajā pašā laikā
-          pilnībā aizmirst par studijām arī nevar, jo nedēļas nogalē bieži
-          jāatkārto teorija vai jāpielabo projekts. Šī sadaļa rāda, ka līdzsvars
-          nav perfekts, bet tas ir svarīgs. Bez atpūtas pat interesanti
-          priekšmeti sāk šķist smagi, un koda kļūdas kļūst arvien grūtāk
-          pamanāmas.
-        </p>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Brīvais laiks</h2>
+
+        <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Brīvais laiks datorikas studenta nedēļā nav tukša vieta grafikā, bet apzināti jāizcīna.
+            Ja visu laiku domā tikai par lekcijām, mājasdarbiem un termiņiem, nogurums sakrājas ļoti
+            ātri. Tāpēc cenšos nedēļā atstāt vietu kustībai, draugiem un mierīgākiem vakariem.
+            Dažreiz tas izdodas labi, bet citreiz brīvais laiks pārvēršas par vēl vienu iespēju
+            pabeigt iesākto uzdevumu. Man palīdz mazi pārtraukumi: pastaiga pēc lekcijām, saruna ar
+            draugiem, filma vai spēle vakarā. Tajā pašā laikā pilnībā aizmirst par studijām arī nevar,
+            jo nedēļas nogalē bieži jāatkārto teorija vai jāpielabo projekts. Šī sadaļa rāda, ka
+            līdzsvars nav perfekts, bet tas ir svarīgs. Bez atpūtas pat interesanti priekšmeti sāk
+            šķist smagi, un koda kļūdas kļūst arvien grūtāk pamanāmas.
+          </p>
+
+          <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
+            <Image
+              src="/images/free-time-weights.jpg"
+              alt="Hanteļu plaukts sporta zālē kā ilustrācija brīvajam laikam"
+              width={1920}
+              height={1280}
+              className="aspect-[4/5] w-full object-cover"
+            />
+          </figure>
+        </div>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
@@ -67,15 +77,11 @@ export function BrivaisLaiks() {
               key={a.title}
               className="p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
-              <div
-                className={`flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${colorMap[a.color]}`}
-              >
+              <div className={`flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${colorMap[a.color]}`}>
                 <Icon size={20} />
               </div>
               <h3 className="font-semibold text-sm mb-2">{a.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                {a.text}
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{a.text}</p>
             </div>
           );
         })}
