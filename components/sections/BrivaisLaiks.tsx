@@ -39,9 +39,6 @@ export function BrivaisLaiks() {
   return (
     <section id="brivais-laiks" className="py-20 px-4 max-w-5xl mx-auto">
       <div className="flex flex-col items-center text-center mb-12">
-        <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30">
-          <Gamepad2 size={28} className="text-green-600 dark:text-green-400" />
-        </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Brīvais laiks</h2>
 
         <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">

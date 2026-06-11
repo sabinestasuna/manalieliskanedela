@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Bus } from "lucide-react";
 
 const steps = [
   { time: "07:20", label: "Celšanās Juglā", desc: "Rīts sākas ar kafiju un ātru pārbaudi, vai somā ir dators, lādētājs un pieraksti." },
@@ -14,9 +13,6 @@ export function Cels() {
     <section id="cels" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-amber-100 dark:bg-amber-900/30">
-            <Bus size={28} className="text-amber-600 dark:text-amber-400" />
-          </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">Ceļš uz universitāti</h2>
 
           <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">

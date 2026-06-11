@@ -59,9 +59,6 @@ export function Platformas() {
   return (
     <section id="platformas" className="py-20 px-4 max-w-5xl mx-auto">
       <div className="flex flex-col items-center text-center mb-12">
-        <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-sky-100 dark:bg-sky-900/30">
-          <Globe size={28} className="text-sky-600 dark:text-sky-400" />
-        </div>
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">Studiju platformas</h2>
 
         <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">

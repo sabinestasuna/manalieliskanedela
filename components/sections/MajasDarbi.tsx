@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Code2 } from "lucide-react";
 
 const tasks = [
   { title: "Programmēšanas uzdevums par masīviem", deadline: "Pirmdiena, 23:59", status: "Izdarīts", color: "green" },
@@ -22,9 +21,6 @@ export function MajasDarbi() {
     <section id="majas-darbi" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-purple-100 dark:bg-purple-900/30">
-            <Code2 size={28} className="text-purple-600 dark:text-purple-400" />
-          </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">Mājasdarbi un projekti</h2>
 
           <div className="grid w-full max-w-3xl gap-6 md:grid-cols-[minmax(0,1fr)_230px] md:items-start">
