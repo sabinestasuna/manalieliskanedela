@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -16,6 +16,11 @@ const links = [
 export function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 dark:bg-gray-950/85 backdrop-blur border-b border-gray-200 dark:border-gray-800">
@@ -44,7 +49,11 @@ export function Navbar() {
             className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             aria-label="Pārslēgt krāsu režīmu"
           >
-            {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            {mounted ? (
+              resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />
+            ) : (
+              <span className="block h-[18px] w-[18px]" />
+            )}
           </button>
 
           <button
