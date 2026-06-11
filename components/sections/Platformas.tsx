@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GitBranch, Globe, Mail, MessageSquare, Video, type LucideIcon } from "lucide-react";
+import { GitBranch, Mail, MessageSquare, Video, type LucideIcon } from "lucide-react";
 
 type Platform = {
   name: string;
