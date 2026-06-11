@@ -1,10 +1,18 @@
 import Image from "next/image";
-import { GitBranch, Globe, Mail, MessageSquare, Video } from "lucide-react";
+import { GitBranch, Globe, Mail, MessageSquare, Video, type LucideIcon } from "lucide-react";
 
-const platforms = [
+type Platform = {
+  name: string;
+  icon?: LucideIcon;
+  iconImage?: string;
+  color: string;
+  description: string;
+};
+
+const platforms: Platform[] = [
   {
     name: "Moodle (e-studijas)",
-    icon: Globe,
+    iconImage: "/images/moodle-icon.png",
     color: "blue",
     description:
       "Šeit atrodam uzdevumus, lekciju materiālus, testus un atzīmes. Ja kaut kas nav Moodle, tad parasti sākas neliela detektīva spēle.",
@@ -84,13 +92,25 @@ export function Platformas() {
       <div className="grid gap-6 sm:grid-cols-2">
         {platforms.map((p) => {
           const Icon = p.icon;
+
           return (
             <div
               key={p.name}
               className="flex gap-4 p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
               <div className={`shrink-0 flex items-center justify-center w-11 h-11 rounded-lg ${colorMap[p.color]}`}>
-                <Icon size={22} />
+                {p.iconImage ? (
+                  <Image
+                    src={p.iconImage}
+                    alt=""
+                    width={22}
+                    height={22}
+                    className="h-[22px] w-[22px]"
+                    aria-hidden="true"
+                  />
+                ) : Icon ? (
+                  <Icon size={22} />
+                ) : null}
               </div>
               <div>
                 <h3 className="font-semibold text-sm mb-1">{p.name}</h3>
