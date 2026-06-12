@@ -4,35 +4,24 @@ const activities = [
   {
     iconImage: "/images/activity-movement-icon.png",
     title: "Kustība",
-    color: "red",
     text: "Pēc garām lekcijām palīdz pastaiga vai sporta zāle. Kustība sakārto galvu pēc vairākām stundām pie datora.",
   },
   {
     iconImage: "/images/activity-friends-icon.png",
     title: "Draugi",
-    color: "green",
     text: "Tikšanās ar draugiem atgādina, ka studijas nav tikai termiņi. Dažreiz pietiek ar stundu sarunu pie kafijas.",
   },
   {
     iconImage: "/images/activity-games-icon.png",
     title: "Spēles un filmas",
-    color: "violet",
     text: "Vakara atpūta palīdz pārslēgties no koda. Svarīgi tikai nepārvērst vienu sēriju par visu nakti.",
   },
   {
     iconImage: "/images/activity-study-icon.png",
     title: "Mācības nedēļas nogalē",
-    color: "blue",
     text: "Daļa brīvā laika tomēr aiziet atkārtošanai un projektiem. Tas nav ideāli, bet palīdz nepazaudēt ritmu.",
   },
 ];
-
-const colorMap: Record<string, string> = {
-  red: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
-  green: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
-  violet: "bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400",
-  blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
-};
 
 export function BrivaisLaiks() {
   return (
@@ -72,13 +61,13 @@ export function BrivaisLaiks() {
               key={a.title}
               className="p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
-              <div className={`flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${colorMap[a.color]}`}>
+              <div className="mb-3 h-10 w-10">
                 <Image
                   src={a.iconImage}
                   alt=""
-                  width={20}
-                  height={20}
-                  className="h-5 w-5"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10"
                   aria-hidden="true"
                 />
               </div>

@@ -5,7 +5,7 @@ type Platform = {
   name: string;
   icon?: LucideIcon;
   iconImage?: string;
-  color: string;
+  color?: string;
   description: string;
 };
 
@@ -13,7 +13,6 @@ const platforms: Platform[] = [
   {
     name: "Moodle (e-studijas)",
     iconImage: "/images/moodle-icon.png",
-    color: "blue",
     description:
       "Šeit atrodam uzdevumus, lekciju materiālus, testus un atzīmes. Ja kaut kas nav Moodle, tad parasti sākas neliela detektīva spēle.",
   },
@@ -27,21 +26,18 @@ const platforms: Platform[] = [
   {
     name: "Zoom",
     iconImage: "/images/platform-zoom-icon.png",
-    color: "sky",
     description:
       "Attālinātajām lekcijām, kur galvenais ir nepalaist garām sākumu un pārbaudīt, vai mikrofons nav ieslēgts nepareizajā brīdī.",
   },
   {
     name: "Outlook",
     iconImage: "/images/platform-outlook-icon.png",
-    color: "red",
     description:
       "Universitātes e-pastiem, pasniedzēju paziņojumiem un kalendāra uzaicinājumiem. Bez Outlook viegli nepamanīt termiņu maiņas.",
   },
   {
     name: "GitHub",
     iconImage: "/images/platform-github-icon.png",
-    color: "gray",
     description:
       "Koda glabāšanai un grupas projektiem. Svarīgi iemācīties izmantot jau no sākuma, jo programmēšanā bez versiju kontroles ātri rodas haoss.",
   },
@@ -95,20 +91,22 @@ export function Platformas() {
               key={p.name}
               className="flex gap-4 p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
-              <div className={`shrink-0 flex items-center justify-center w-11 h-11 rounded-lg ${colorMap[p.color]}`}>
-                {p.iconImage ? (
+              {p.iconImage ? (
+                <div className="shrink-0 h-11 w-11">
                   <Image
                     src={p.iconImage}
                     alt=""
-                    width={22}
-                    height={22}
-                    className="h-[22px] w-[22px]"
+                    width={44}
+                    height={44}
+                    className="h-11 w-11"
                     aria-hidden="true"
                   />
-                ) : Icon ? (
+                </div>
+              ) : Icon && p.color ? (
+                <div className={`shrink-0 flex items-center justify-center w-11 h-11 rounded-lg ${colorMap[p.color]}`}>
                   <Icon size={22} />
-                ) : null}
-              </div>
+                </div>
+              ) : null}
               <div>
                 <h3 className="font-semibold text-sm mb-1">{p.name}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{p.description}</p>
