@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { MessageSquare, type LucideIcon } from "lucide-react";
 
 type Platform = {
   name: string;
-  icon?: LucideIcon;
-  iconImage?: string;
-  color?: string;
+  iconImage: string;
   description: string;
 };
 
@@ -18,8 +15,7 @@ const platforms: Platform[] = [
   },
   {
     name: "Microsoft Teams",
-    icon: MessageSquare,
-    color: "purple",
+    iconImage: "/images/platform-teams-icon.png",
     description:
       "Grupas projektu sarunām, attālinātiem praktikumiem un konsultācijām. Teams palīdz, bet paziņojumu tur mēdz būt vairāk nekā vajag.",
   },
@@ -42,14 +38,6 @@ const platforms: Platform[] = [
       "Koda glabāšanai un grupas projektiem. Svarīgi iemācīties izmantot jau no sākuma, jo programmēšanā bez versiju kontroles ātri rodas haoss.",
   },
 ];
-
-const colorMap: Record<string, string> = {
-  blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
-  purple: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
-  sky: "bg-sky-100 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400",
-  red: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
-  gray: "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300",
-};
 
 export function Platformas() {
   return (
@@ -84,29 +72,21 @@ export function Platformas() {
 
       <div className="grid gap-6 sm:grid-cols-2">
         {platforms.map((p) => {
-          const Icon = p.icon;
-
           return (
             <div
               key={p.name}
               className="flex gap-4 p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
-              {p.iconImage ? (
-                <div className="shrink-0 h-11 w-11">
-                  <Image
-                    src={p.iconImage}
-                    alt=""
-                    width={44}
-                    height={44}
-                    className="h-11 w-11"
-                    aria-hidden="true"
-                  />
-                </div>
-              ) : Icon && p.color ? (
-                <div className={`shrink-0 flex items-center justify-center w-11 h-11 rounded-lg ${colorMap[p.color]}`}>
-                  <Icon size={22} />
-                </div>
-              ) : null}
+              <div className="shrink-0 h-11 w-11">
+                <Image
+                  src={p.iconImage}
+                  alt=""
+                  width={44}
+                  height={44}
+                  className="h-11 w-11"
+                  aria-hidden="true"
+                />
+              </div>
               <div>
                 <h3 className="font-semibold text-sm mb-1">{p.name}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{p.description}</p>
