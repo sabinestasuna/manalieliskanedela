@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GitBranch, Mail, MessageSquare, Video, type LucideIcon } from "lucide-react";
+import { MessageSquare, type LucideIcon } from "lucide-react";
 
 type Platform = {
   name: string;
@@ -26,21 +26,21 @@ const platforms: Platform[] = [
   },
   {
     name: "Zoom",
-    icon: Video,
+    iconImage: "/images/platform-zoom-icon.png",
     color: "sky",
     description:
       "Attālinātajām lekcijām, kur galvenais ir nepalaist garām sākumu un pārbaudīt, vai mikrofons nav ieslēgts nepareizajā brīdī.",
   },
   {
     name: "Outlook",
-    icon: Mail,
+    iconImage: "/images/platform-outlook-icon.png",
     color: "red",
     description:
       "Universitātes e-pastiem, pasniedzēju paziņojumiem un kalendāra uzaicinājumiem. Bez Outlook viegli nepamanīt termiņu maiņas.",
   },
   {
     name: "GitHub",
-    icon: GitBranch,
+    iconImage: "/images/platform-github-icon.png",
     color: "gray",
     description:
       "Koda glabāšanai un grupas projektiem. Svarīgi iemācīties izmantot jau no sākuma, jo programmēšanā bez versiju kontroles ātri rodas haoss.",

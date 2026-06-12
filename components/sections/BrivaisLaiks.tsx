@@ -1,27 +1,26 @@
 import Image from "next/image";
-import { BookOpen, Dumbbell, Gamepad2, Users } from "lucide-react";
 
 const activities = [
   {
-    icon: Dumbbell,
+    iconImage: "/images/activity-movement-icon.png",
     title: "Kustība",
     color: "red",
     text: "Pēc garām lekcijām palīdz pastaiga vai sporta zāle. Kustība sakārto galvu pēc vairākām stundām pie datora.",
   },
   {
-    icon: Users,
+    iconImage: "/images/activity-friends-icon.png",
     title: "Draugi",
     color: "green",
     text: "Tikšanās ar draugiem atgādina, ka studijas nav tikai termiņi. Dažreiz pietiek ar stundu sarunu pie kafijas.",
   },
   {
-    icon: Gamepad2,
+    iconImage: "/images/activity-games-icon.png",
     title: "Spēles un filmas",
     color: "violet",
     text: "Vakara atpūta palīdz pārslēgties no koda. Svarīgi tikai nepārvērst vienu sēriju par visu nakti.",
   },
   {
-    icon: BookOpen,
+    iconImage: "/images/activity-study-icon.png",
     title: "Mācības nedēļas nogalē",
     color: "blue",
     text: "Daļa brīvā laika tomēr aiziet atkārtošanai un projektiem. Tas nav ideāli, bet palīdz nepazaudēt ritmu.",
@@ -68,14 +67,20 @@ export function BrivaisLaiks() {
 
       <div className="grid gap-6 sm:grid-cols-2">
         {activities.map((a) => {
-          const Icon = a.icon;
           return (
             <div
               key={a.title}
               className="p-5 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950"
             >
               <div className={`flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${colorMap[a.color]}`}>
-                <Icon size={20} />
+                <Image
+                  src={a.iconImage}
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="h-5 w-5"
+                  aria-hidden="true"
+                />
               </div>
               <h3 className="font-semibold text-sm mb-2">{a.title}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{a.text}</p>
