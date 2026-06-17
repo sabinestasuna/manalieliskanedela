@@ -38,8 +38,8 @@ export function MajasDarbi() {
 
             <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
               <Image
-                src="/images/homework-open-book.jpg"
-                alt="Atvērta grāmata un pieraksti kā ilustrācija mājasdarbiem un projektiem"
+                src="/images/homework-code-todo.png"
+                alt="Dators ar koda redaktoru un uzdevumu sarakstu kā ilustrācija mājasdarbiem un projektiem"
                 width={1920}
                 height={1271}
                 className="aspect-[4/5] w-full object-cover"
