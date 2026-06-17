@@ -61,7 +61,7 @@ export function Lekcijas() {
           <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
             <Image
               src="/images/lecture-test-board.jpg"
-              alt="Tāfele ar uzrakstu Test kā ilustrācija lekciju grafikam"
+              alt="Balta lapiņa ar uzrakstu Test kā ilustrācija lekciju grafikam"
               width={1920}
               height={1435}
               className="aspect-[4/5] w-full object-cover"
