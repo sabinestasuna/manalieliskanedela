@@ -60,8 +60,8 @@ export function Platformas() {
 
           <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
             <Image
-              src="/images/study-platforms-meeting.jpg"
-              alt="Darba tikšanās ar datoriem kā ilustrācija studiju platformām"
+              src="/images/study-platforms-calendar.png"
+              alt="Outlook kalendārs datorā kā ilustrācija studiju platformām"
               width={1920}
               height={1080}
               className="aspect-[4/5] w-full object-cover"
