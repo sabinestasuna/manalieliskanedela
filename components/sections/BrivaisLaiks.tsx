@@ -44,8 +44,8 @@ export function BrivaisLaiks() {
 
           <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
             <Image
-              src="/images/free-time-weights.jpg"
-              alt="Hanteļu plaukts sporta zālē kā ilustrācija brīvajam laikam"
+              src="/images/free-time-gym.png"
+              alt="Sporta zāles trenažieri kā ilustrācija brīvajam laikam"
               width={1920}
               height={1280}
               className="aspect-[4/5] w-full object-cover"
