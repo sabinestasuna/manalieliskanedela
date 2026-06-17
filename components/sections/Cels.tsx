@@ -30,8 +30,8 @@ export function Cels() {
 
             <figure className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 shadow-sm">
               <Image
-                src="/images/route-library.jpg"
-                alt="Bibliotēkas telpa kā ilustrācija ceļam uz studijām un universitātes vidi"
+                src="/images/route-trams.png"
+                alt="Tramvaji pilsētas centrā kā ilustrācija ceļam uz universitāti"
                 width={1920}
                 height={1080}
                 className="aspect-[4/5] w-full object-cover"
